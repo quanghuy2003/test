@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="abc" placeholder="điểm giữa kì">
+<input type="text" id="cba" placeholder="điểm cuối kì">
+<button onclick="cal()">tính điểm</button>
+<h1 id="kq"></h1>
+<script>
+    function cal() {
+        let a = +document.getElementById("abc").value;
+        let b = +document.getElementById("cba").value;
+        let huy;
+        if ((a + b) / 2 > 8.5) {
+            huy="học sinh giỏi"
+        } else if ((a + b) / 2 > 7) {
+            huy="học sinh khá"
+        } else if ((a + b) / 2 > 5) {
+            huy="học sinh trung bình"
+        } else huy="học sinh yếu"
+        document.getElementById("kq").innerHTML = huy
+    }
+</script>
+</body>
+</html>
